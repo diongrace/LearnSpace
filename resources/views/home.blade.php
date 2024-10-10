@@ -141,7 +141,7 @@
                 <li class="nav-item nav-item-spacing">
                     <a class="nav-link" href="#"><i class="fas fa-chalkboard-teacher"></i> Devenir Enseignant</a>
                 </li>
-                @auth
+                {{-- @auth
                 <li class="nav-item dropdown nav-item-spacing">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-tachometer-alt"></i> Tableau de bord
@@ -153,10 +153,10 @@
                         <a class="dropdown-item" href="{{ url('/dashboard/logout') }}"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
                     </div>
                 </li>
-                @else
+                @else --}}
                 <li class="nav-item nav-item-spacing"><a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> Se connecter</a></li>
                 <li class="nav-item nav-item-spacing"><a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-plus"></i> S'inscrire</a></li>
-                @endauth
+                {{-- @endauth --}}
                 <li class="nav-item nav-item-spacing">
                     <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
                 </li>
@@ -177,21 +177,21 @@
     <div id="courseCarousel" class="carousel slide my-4" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/assets/images/cour.jpeg" class="d-block w-100" alt="Cours 1">
+                <img src="/images/cour.jpeg" class="d-block w-100" alt="Cours 1">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Cours de Programmation</h5>
                     <p>Développez vos compétences en codage avec notre cours complet.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/assets/images/homeschool.png" class="d-block w-100" alt="Cours 2">
+                <img src="/images/homeschool.png" class="d-block w-100" alt="Cours 2">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Cours de Design</h5>
                     <p>Apprenez les bases du design graphique et de l'UX/UI.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/assets/images/edu.png" class="d-block w-100" alt="Cours 3">
+                <img src="/images/edu.png" class="d-block w-100" alt="Cours 3">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Cours de Marketing Digital</h5>
                     <p>Maîtrisez les stratégies de marketing en ligne.</p>
