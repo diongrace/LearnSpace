@@ -24,7 +24,7 @@
                 </a>
                 <div class="collapse" id="collapseCourses" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="course-videos.html">Vidéos de Cours</a>
+                        <a class="nav-link" href="{{('videos.viduo')}}">Vidéos de Cours</a>
                         <a class="nav-link" href="enrolled-courses.html">Liste des cours inscrits</a>
                         <a class="nav-link" href="recommended-courses.html">Cours recommandés</a>
                         <a class="nav-link" href="course-evaluations.html">Évaluation du cours</a>
