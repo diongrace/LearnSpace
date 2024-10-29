@@ -3,130 +3,117 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <br>
-                <!-- Tableau de Bord Personnalisé -->
+                <!-- Tableau de Bord -->
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseDashboard" aria-expanded="false" aria-controls="collapseDashboard">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Tableau de Bord Personnalisé
+                    Tableau de Bord
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapseDashboard" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="overview.html">Vue d'ensemble des progrès</a>
+                        <a class="nav-link" href="overview.html">Vue d'ensemble</a>
                         <a class="nav-link" href="notifications.html">Notifications</a>
                     </nav>
                 </div>
-                
-                <!-- Gestion des Cours -->
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCourses" aria-expanded="false" aria-controls="collapseCourses">
-                    <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
-                    Gestion des Cours
+
+                <!-- Apprentissage de la Manipulation Ordinateur -->
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseComputerBasics" aria-expanded="false" aria-controls="collapseComputerBasics">
+                    <div class="sb-nav-link-icon"><i class="fas fa-desktop"></i></div>
+                    Manipulation d'Ordinateur
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseCourses" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                <div class="collapse" id="collapseComputerBasics" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="{{('videos.viduo')}}">Vidéos de Cours</a>
-                        <a class="nav-link" href="enrolled-courses.html">Liste des cours inscrits</a>
-                        <a class="nav-link" href="recommended-courses.html">Cours recommandés</a>
-                        <a class="nav-link" href="course-evaluations.html">Évaluation du cours</a>
+                        <a class="nav-link" href="{{ route('computer-tutorials') }}">Tutoriels pour Débutants</a>
+                        <a class="nav-link" href="{{ route('file-management') }}">Gestion de Fichiers</a>
+                        <a class="nav-link" href="{{ route('create') }}">Ajouter tutotiels</a>
                     </nav>
                 </div>
 
-                <!-- Accès aux Ressources -->
+                <!-- Cours de Programmation -->
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProgramming" aria-expanded="false" aria-controls="collapseProgramming">
+                    <div class="sb-nav-link-icon"><i class="fas fa-code"></i></div>
+                    Cours de Programmation
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseProgramming" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="languages.html">Langages de Programmation</a>
+                        <a class="nav-link" href="coding-exercises.html">Exercices Pratiques</a>
+                        <a class="nav-link" href="projects.html">Projets et Défis</a>
+                    </nav>
+                </div>
+
+                <!-- Montage Vidéo -->
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseVideoEditing" aria-expanded="false" aria-controls="collapseVideoEditing">
+                    <div class="sb-nav-link-icon"><i class="fas fa-video"></i></div>
+                    Montage Vidéo
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseVideoEditing" aria-labelledby="headingFour" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="editing-tutorials.html">Tutoriels de Montage</a>
+                        <a class="nav-link" href="project-files.html">Fichiers de Projet</a>
+                    </nav>
+                </div>
+
+                <!-- Graphisme et Photoshop -->
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePhotoshop" aria-expanded="false" aria-controls="collapsePhotoshop">
+                    <div class="sb-nav-link-icon"><i class="fas fa-paint-brush"></i></div>
+                    Graphisme et Photoshop
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapsePhotoshop" aria-labelledby="headingFive" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="photoshop-tutorials.html">Tutoriels Photoshop</a>
+                        <a class="nav-link" href="graphic-design.html">Design Graphique</a>
+                    </nav>
+                </div>
+
+                <!-- Ressources et Documentation -->
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseResources" aria-expanded="false" aria-controls="collapseResources">
                     <div class="sb-nav-link-icon"><i class="fas fa-folder"></i></div>
-                    Accès aux Ressources
+                    Ressources et Documentation
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseResources" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
+                <div class="collapse" id="collapseResources" aria-labelledby="headingSix" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="course-material.html">Matériel de cours</a>
-                        <a class="nav-link" href="discussion-forum.html">Forum de discussion</a>
+                        <a class="nav-link" href="guides.html">Guides et Manuels</a>
+                        <a class="nav-link" href="discussion-forum.html">Forum de Discussion</a>
                     </nav>
                 </div>
 
-                <!-- Évaluations et Quiz -->
+                <!-- Évaluations et Certificats -->
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseAssessments" aria-expanded="false" aria-controls="collapseAssessments">
-                    <div class="sb-nav-link-icon"><i class="fas fa-pencil-alt"></i></div>
-                    Évaluations et Quiz
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapseAssessments" aria-labelledby="headingFour" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="access-evaluations.html">Accès aux évaluations</a>
-                        <a class="nav-link" href="evaluation-results.html">Résultats des évaluations</a>
-                    </nav>
-                </div>
-
-                <!-- Suivi des Progrès -->
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProgress" aria-expanded="false" aria-controls="collapseProgress">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-line"></i></div>
-                    Suivi des Progrès
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapseProgress" aria-labelledby="headingFive" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="progress-charts.html">Graphiques et rapports</a>
-                        <a class="nav-link" href="learning-goals.html">Objectifs d'apprentissage</a>
-                    </nav>
-                </div>
-
-                <!-- Profil Personnel -->
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProfile" aria-expanded="false" aria-controls="collapseProfile">
-                    <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                    Profil Personnel
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapseProfile" aria-labelledby="headingSix" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="personal-info.html">Informations personnelles</a>
-                        <a class="nav-link" href="learning-preferences.html">Préférences d'apprentissage</a>
-                    </nav>
-                </div>
-
-                <!-- Communications -->
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCommunications" aria-expanded="false" aria-controls="collapseCommunications">
-                    <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
-                    Communications
-                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                </a>
-                <div class="collapse" id="collapseCommunications" aria-labelledby="headingSeven" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="internal-messaging.html">Messagerie interne</a>
-                        <a class="nav-link" href="email-notifications.html">Notifications par email</a>
-                    </nav>
-                </div>
-
-                <!-- Certificats et Diplômes -->
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCertificates" aria-expanded="false" aria-controls="collapseCertificates">
                     <div class="sb-nav-link-icon"><i class="fas fa-certificate"></i></div>
-                    Certificats et Diplômes
+                    Évaluations et Certificats
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseCertificates" aria-labelledby="headingEight" data-bs-parent="#sidenavAccordion">
+                <div class="collapse" id="collapseAssessments" aria-labelledby="headingSeven" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="certificates.html">Certificats de réussite</a>
-                        <a class="nav-link" href="certificate-history.html">Historique des certificats</a>
+                        <a class="nav-link" href="exams.html">Examens et Quiz</a>
+                        <a class="nav-link" href="certificates.html">Certificats de Réussite</a>
                     </nav>
                 </div>
 
-                <!-- Support et Aide -->
+                <!-- Support et Assistance -->
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSupport" aria-expanded="false" aria-controls="collapseSupport">
                     <div class="sb-nav-link-icon"><i class="fas fa-life-ring"></i></div>
-                    Support et Aide
+                    Support et Assistance
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseSupport" aria-labelledby="headingNine" data-bs-parent="#sidenavAccordion">
+                <div class="collapse" id="collapseSupport" aria-labelledby="headingEight" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="faq.html">FAQ et ressources d'aide</a>
-                        <a class="nav-link" href="technical-support.html">Assistance technique</a>
+                        <a class="nav-link" href="faq.html">FAQ et Support</a>
+                        <a class="nav-link" href="technical-support.html">Assistance Technique</a>
                     </nav>
                 </div>
             </div>
         </div>
 
         <div class="sb-sidenav-footer">
-            <div class="small">Logged in as:</div>
-            Start Bootstrap
+            <div class="small">Connecté en tant que:</div>
+            Nom de l'Utilisateur
         </div>
     </nav>
 </div>
