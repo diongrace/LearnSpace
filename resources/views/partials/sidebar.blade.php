@@ -22,14 +22,20 @@
                     Manipulation d'Ordinateur
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseComputerBasics" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
+                <div class="collapse" id="collapseComputerBasics" aria-labelledby="headingFour" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="{{ route('computer-tutorials') }}">Tutoriels pour Débutants</a>
                         <a class="nav-link" href="{{ route('file-management') }}">Gestion de Fichiers</a>
-                        <a class="nav-link" href="{{ route('create') }}">Ajouter tutotiels</a>
+                        <a class="nav-link" href="{{ route('create') }}">Ajouter tutoriels</a>
+
+                        <!-- Vérifier si la variable $tutorials est définie et non vide -->
+                        @if(isset($tutorials) && $tutorials->count())
+                            @foreach ($tutorials as $tutorial)
+                                <a class="nav-link" href="{{ route('tutorials.edit', $tutorial->id) }}">Modifier {{ $tutorial->title }}</a>
+                            @endforeach
+                        @endif
                     </nav>
                 </div>
-
                 <!-- Cours de Programmation -->
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProgramming" aria-expanded="false" aria-controls="collapseProgramming">
                     <div class="sb-nav-link-icon"><i class="fas fa-code"></i></div>

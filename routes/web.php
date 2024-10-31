@@ -44,10 +44,21 @@ Route::get('/ordinateur/create', function () {
     return view('ordinateur.create'); 
 })->name('create');
 
+Route::get('/ordinateur/edit_editorial', function () {
+    return view('tutorials.edit'); 
+})->name('edit_editorial');
+
+
 // Routes pour les vidéos
 Route::get('/ordinateur/computer-tutorials', [ComputerBasicsController::class, 'tutorials'])->name('computer-tutorials');
 Route::get('/ordinateur/file-management', [ComputerBasicsController::class, 'fileManagement'])->name('file-management');
 Route::post('/create', [ComputerBasicsController::class, 'store'])->name('create.store');
+Route::get('/tutorials/{tutorial}/edit', [ComputerBasicsController::class, 'edit'])->name('tutorials.edit');
+// Route pour mettre à jour un tutoriel
+Route::patch('/tutorials/{tutorial}', [ComputerBasicsController::class, 'update'])->name('tutorials.update');
+Route::delete('/tutorials/{tutorial}', [ComputerBasicsController::class, 'destroy'])->name('tutorials.destroy');
+
+
 
 
 // Autres routes de redirection

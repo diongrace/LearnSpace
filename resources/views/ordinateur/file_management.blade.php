@@ -9,24 +9,30 @@
     </div>
     
     <div class="row">
-        <!-- Affichage de chaque tutoriel sous forme de carte -->
         @foreach ($tutorials as $tutorial)
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card shadow-sm h-100 border-0" style="border-radius: 12px; background-color: #f7f9fc;">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title text-primary">{{ $tutorial->title }}</h5>
-                        <p class="card-text text-secondary">{{ Str::limit($tutorial->description, 100, '...') }}</p>
-                        
-                        @if ($tutorial->file_path)
+            <!-- Vérification si le fichier est un PDF -->
+            @if ($tutorial->file_path && Str::endsWith($tutorial->file_path, '.pdf'))
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card shadow-sm h-100 border-0" style="border-radius: 12px; background-color: #f7f9fc;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-primary">{{ $tutorial->title }}</h5>
+                            <p class="card-text text-secondary">{{ Str::limit($tutorial->description, 100, '...') }}</p>
+                            
+                            <!-- Video Display -->
+                            @if ($tutorial->video_url)
+                                <div class="video-container mb-3">
+                                    <iframe width="100%" height="200" src="{{ $tutorial->video_url }}" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            @endif
+
+                            <!-- Bouton de téléchargement pour les fichiers PDF -->
                             <a href="{{ asset('storage/' . $tutorial->file_path) }}" class="btn btn-outline-primary mt-auto" download>
-                                Télécharger le fichier
+                                Télécharger le fichier PDF
                             </a>
-                        @else
-                            <span class="text-muted mt-auto">Aucun fichier à télécharger</span>
-                        @endif
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
         @endforeach
     </div>
 </div>

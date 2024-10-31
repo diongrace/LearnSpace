@@ -11,12 +11,13 @@ class CreateTutorialsTable extends Migration
         Schema::create('tutorials', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
-            $table->string('file_path');
-            $table->string('video_url'); 
+            $table->text('description')->nullable();
+            $table->string('file_path')->nullable();
+            $table->string('video_url')->nullable();
             $table->timestamps();
         });
     }
+    
 
     public function down()
     {
